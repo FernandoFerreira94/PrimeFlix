@@ -1,13 +1,20 @@
 import React from "react";
-import Login from "./Pages/Login";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// Pages
+import Header from "./Components/header";
+import MyRoutes from "./routes";
+
+// styled
 import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <>
-      <Login />
+    <Router>
+      <Header />
+      <MyRoutes />
       <GlobalStyles />
-    </>
+    </Router>
   );
 }
 

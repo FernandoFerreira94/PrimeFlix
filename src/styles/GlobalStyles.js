@@ -36,7 +36,13 @@ button:hover {
 
 a {
     text-decoration: none;
-    color: ${primaryColor};
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;https://github.com/FernandoFerreira94/Project-React-01.git
 }
 
 ul {
@@ -45,8 +51,8 @@ ul {
 `;
 
 export const Container = styled.section`
-  max-width: 360px;
   background: #fff;
-  margin: 30px auto;
+  margin: 20px 60px;
   padding: 10px;
+  border-radius: 15px;
 `;
