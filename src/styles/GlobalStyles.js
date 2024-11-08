@@ -1,5 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { primaryColor, primaryDarckColor } from "../config/color";
+import {
+  primaryColor,
+  primaryDarckColor,
+  errorColor,
+  successColor,
+} from "../config/color";
+import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
 * {
@@ -17,6 +23,8 @@ height: 100%;
 body {
     background-color: #eee;
 }
+
+
 
 button {
     cursor: pointer;
@@ -42,7 +50,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;https://github.com/FernandoFerreira94/Project-React-01.git
+    text-decoration: underline;
 }
 
 ul {

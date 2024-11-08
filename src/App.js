@@ -1,20 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 // Pages
 import Header from "./Components/header";
-import MyRoutes from "./routes";
+import Rota from "./routes";
 
 // styled
 import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Header />
-      <MyRoutes />
+      <Rota />
       <GlobalStyles />
-    </Router>
+      <ToastContainer autoClose={3000} className="toast-container" />
+    </BrowserRouter>
   );
 }
 
