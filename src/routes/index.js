@@ -12,11 +12,12 @@ export default function Rota() {
   return (
     <Routes>
       {/* Define a rota para a página de login. */}
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       {/* Define a rota protegida para a página raiz, se necessário */}
       <Route
         path="/login"
-        element={<MyRoutes component={<Login />} isClose={true} />}
+        element={<Login />}
+        // MyRoutes element={<Login />} isClose={true}
       />
       {/* Define a rota para uma página 404, que será exibida para qualquer caminho não especificado. */}
       <Route path="*" element={<Page404 />} />
