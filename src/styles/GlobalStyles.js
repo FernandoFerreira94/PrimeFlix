@@ -28,17 +28,18 @@ export default createGlobalStyle`
   button {
     cursor: pointer; // Define o cursor como pointer ao passar o mouse.
     display: block; // Define o botão como um bloco.
-    padding: 2px; // Define o preenchimento do botão.
+    padding:4px; // Define o preenchimento do botão.
     background: ${primaryColor}; // Define a cor de fundo do botão.
     border-radius: 4px; // Define bordas arredondadas.
     color: #fff; // Define a cor do texto.
-    border: 1px solid transparent; // Define a borda do botão como transparente.
+    border: 1px solid black; // Define a borda do botão como transparente.
     transition: all 0.2s; // Define a transição de todas as propriedades com duração de 0.2 segundos.
+    user-select: none;
   }
 
   button:hover {
-    border: 1px solid black; // Define a borda como preta ao passar o mouse.
-    transform: scale(1.06); // Aumenta o tamanho do botão em 6% ao passar o mouse.
+    transform: scale(1.01); // Aumenta o tamanho do botão em 6% ao passar o mouse.
+    filter: brightness(90%);
   }
 
   a {
@@ -54,12 +55,43 @@ export default createGlobalStyle`
 
   ul {
     list-style: none; // Remove os marcadores de lista.
+    margin: 20px; 
   }
+  
+  li{
+    margin: 5px 0;
+    width:70%;
+  }
+
+  input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    font-size: 16px;
+    &:focus {
+      border: 1px solid ${primaryColor};
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 3px;
+  }
+
 `;
 
 export const Container = styled.section`
+  max-width: 80%;
+  width: 600px;
   background: #fff; // Define a cor de fundo como branco.
-  margin: 20px 60px; // Define margens de 20px acima/abaixo e 60px nas laterais.
-  padding: 10px; // Define o preenchimento de 10px.
-  border-radius: 15px; // Define bordas arredondadas com raio de 15px.
+  margin: 30px auto; // Define margens de 20px acima/abaixo e 60px nas laterais.
+  padding: 30px; // Define o preenchimento de 10px.
+  border-radius: 5px; // Define bordas arredondadas com raio de 15px.
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  h1 {
+    text-align: center;
+  }
 `;

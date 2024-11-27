@@ -4,23 +4,28 @@ import MyRoutes from "./MyRoutes"; // Importa o componente MyRoutes.
 
 // Importa os componentes de página.
 import Login from "../Pages/Login";
-import Home from "../Pages/Home";
+import Aluno from "../Pages/Aluno";
+import Alunos from "../Pages/Alunos";
+import Fotos from "../Pages/Fotos";
+import Register from "../Pages/Register";
 import Page404 from "../Pages/Page404";
 
 // Define uma função chamada Rota que retorna as rotas da aplicação.
 export default function Rota() {
   return (
     <Routes>
-      {/* Define a rota para a página principal (home). */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Alunos />} isClosed={false} />
 
-      {/* Define a rota para a página de login. */}
-      <Route path="/login" element={<Login />} />
-      {/* Exemplo comentado de como usar o MyRoutes para rota protegida:
-        <Route path="/login" element={<MyRoutes component={Login} isClose={true} />} /> 
-      */}
+      <Route path="/aluno/:id/edit" element={<Aluno />} isClosed />
 
-      {/* Define uma rota para uma página 404, que será exibida para qualquer caminho não especificado. */}
+      <Route path="/aluno/" element={<Aluno />} isClosed />
+
+      <Route path="/fotos/:id" element={<Fotos />} isClosed />
+
+      <Route path="/login" element={<Login />} isClosed={false} />
+
+      <Route path="/register" element={<Register />} isClosed={false} />
+
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
