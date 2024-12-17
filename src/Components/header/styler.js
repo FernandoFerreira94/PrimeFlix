@@ -1,13 +1,22 @@
-import styled from "styled-components"; // Importa a biblioteca styled-components para criar componentes estilizados.
-import { primaryColor } from "../../config/color"; // Importa a cor primária da configuração de cores.
+import styled from "styled-components";
 
 export const Nav = styled.nav`
-  // Define o componente estilizado Nav, que é um elemento nav.
+  width: 100%;
+  height: 60px;
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
 
-  background: ${primaryColor}; // Define o plano de fundo como a cor primária importada.
-  display: flex; // Utiliza Flexbox para o layout dos itens dentro do nav.
-  justify-content: center; // Centraliza os itens ao longo do eixo principal.
-  gap: 8%; // Define um espaçamento de 8% entre os itens.
-  width: 100%; // Define a largura do nav como 100% do contêiner pai.
-  padding: 15px 0; // Adiciona padding de 15px no eixo vertical (acima e abaixo).
+export const LogoText = styled.span`
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+`;
+
+export const XRed = styled.span`
+  color: red;
+  font-size: 28px;
 `;

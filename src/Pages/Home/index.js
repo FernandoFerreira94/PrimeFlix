@@ -1,25 +1,21 @@
-import React from "react";
-import { Container } from "../../styles/GlobalStyles";
-import { toast } from "react-toastify";
-import axios from "../../service/axios";
+import getMovies from "../../service/api";
+import { BtnMovie, Container, TitleMovie } from "../../styles/GlobalStyles";
+import { useEffect, useState } from "react";
+export default function Filme() {
+  const [filmes, setFilmes] = useState([]);
 
-export default function Home() {
-  const ok = () => toast.success("Ok");
-  const fail = () => toast.error("deu erro");
-  const boty = () => toast("boa boa");
-
-  React.useEffect(() => {
-    /*
-    async function getData() {
-      const response = await axios.get();
-      console.log(response);
-    }
-    getData();
-    */
+  useEffect(() => {
+    getMovies();
   }, []);
   return (
-    <Container>
-      <h1> Home</h1>
-    </Container>
+    <>
+      <div>
+        <TitleMovie>Titulo</TitleMovie>
+        <Container>
+          <h1>img</h1>
+          <BtnMovie>Acessar</BtnMovie>
+        </Container>
+      </div>
+    </>
   );
 }
