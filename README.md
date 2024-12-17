@@ -1,32 +1,32 @@
-# Projeto React com react-router-dom
+# Projeto de Filmes em Destaque
 
-## Descrição
-Este projeto é um exemplo de aplicação React que utiliza `react-router-dom` para gerenciar a navegação entre páginas. Inclui um componente `Header` com links de navegação e uma configuração de rotas para diferentes páginas, incluindo uma página de erro 404.
+Este projeto é um site de filmes desenvolvido com React.js, Styled Components, Axios e React Toastify, utilizando a API do The Movie Database (TMDb) para buscar e exibir filmes em destaque. Os usuários podem navegar por filmes populares, buscar por filmes específicos e visualizar detalhes de cada filme. Além disso, o site permite buscar trailers de filmes no YouTube.
 
-## Estrutura do Projeto
-- **`App.js`**: Componente principal que envolve a aplicação com `BrowserRouter`.
-- **`Header.js`**: Componente de cabeçalho que contém links de navegação.
-- **`routes.js`**: Define as rotas da aplicação.
-- **`Page404.js`**: Componente de página 404 que redireciona para a página inicial.
-- **`history.js`**: Configuração opcional para histórico personalizado (não utilizada na versão 6 do `react-router-dom`).
-- **`GlobalStyles.js`**: Estilos globais aplicados ao aplicativo.
+## Funcionalidades
 
-## Configuração do `App.js`
-```javascript
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import Header from "./Components/header";
-import MyRoutes from "./routes";
-import GlobalStyles from "./styles/GlobalStyles";
+- Header com navegação usando React Router
+- Página inicial com lista de filmes populares
+- Página de descrição detalhada de cada filme
+- Busca por filmes no YouTube
 
-function App() {
-  return (
-    <Router>
-      <Header />
-      <MyRoutes />
-      <GlobalStyles />
-    </Router>
-  );
-}
+## Tecnologias Utilizadas
 
-export default App;
+- React.js
+- Styled Components
+- Axios
+- React Toastify
+- The Movie Database (TMDb) API
+
+## Pré-requisitos
+
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
+
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
+
+## Instalando
+
+Clone o repositório em sua máquina local:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
