@@ -5,9 +5,9 @@ export default (reducers) => {
   // Exporta uma função anônima que recebe os reducers como parâmetro.
   const persisteReducers = persistReducer(
     {
-      key: "REACT-BASE", // Chave utilizada para identificar a aplicação.
+      key: "CONSUMO API", // Chave utilizada para identificar a aplicação.
       storage, // Define o storage a ser utilizado (neste caso, localStorage).
-      whitelist: ["example"], // Lista de reducers que serão persistidos.
+      whitelist: ["auth"], // Lista de reducers que serão persistidos.
     },
     reducers // Passa os reducers originais para serem persistidos.
   );
