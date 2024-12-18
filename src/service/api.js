@@ -10,7 +10,7 @@ const getMovies = async () => {
         api_key: API_KEY,
       },
     });
-    console.log(response.data.results);
+    return response.data.results.slice(0, 10);
   } catch (error) {
     console.error("Erro ao buscar filmes:", error);
   }
