@@ -13,7 +13,23 @@ const getMovies = async () => {
     return response.data.results.slice(0, 10);
   } catch (error) {
     console.error("Erro ao buscar filmes:", error);
+    return [];
   }
 };
 
-export default getMovies;
+const getMovieById = async (id) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/movie/${id}`, {
+      params: {
+        api_key: API_KEY,
+        language: "pt-BR",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar detalhes do filme:", error);
+    return;
+  }
+};
+
+export { getMovies, getMovieById };

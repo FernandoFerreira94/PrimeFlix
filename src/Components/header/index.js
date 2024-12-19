@@ -11,12 +11,8 @@ export default function Header() {
             Prime Fli<XRed>x</XRed>
           </LogoText>
         </Link>
-        <div>
-          <Link to="/filmes">
-            <BtnMyMovies>Filmes</BtnMyMovies>
-          </Link>
-          <BtnMyMovies>Meus Filmes</BtnMyMovies>
-        </div>
+
+        <BtnMyMovies>Meus Filmes</BtnMyMovies>
       </Nav>
     </header>
   );

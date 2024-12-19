@@ -1,4 +1,4 @@
-import getMovies from "../../service/api";
+import { getMovies } from "../../service/api";
 import { BtnMovie, Container, TitleMovie } from "../../styles/GlobalStyles";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
