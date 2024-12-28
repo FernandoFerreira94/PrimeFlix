@@ -8,6 +8,7 @@ Este projeto é um site de filmes desenvolvido com React.js, Styled Components, 
 - Página inicial com lista de filmes populares
 - Página de descrição detalhada de cada filme
 - Busca por filmes no YouTube
+- Sistema de redirecionamento para trailers no YouTube a partir dos títulos acessados
 - Página de erro 404 para páginas não encontradas
 - Mensagem de carregamento (loading) enquanto os dados são buscados
 
