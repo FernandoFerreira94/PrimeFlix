@@ -20,3 +20,13 @@ export const XRed = styled.span`
   color: red;
   font-size: 28px;
 `;
+
+export const LinkLogo = styled.a`
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+`;

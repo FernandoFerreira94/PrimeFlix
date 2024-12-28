@@ -20,6 +20,10 @@ transition: all 0.2s;
 &:hover {
   color: rgba(0,0,0);
 }
+
+.link{
+  color: black;
+}
 }
 
 
@@ -61,6 +65,21 @@ export const BtnMovie = styled.button`
   }
 `;
 
+export const BtnTrailer = styled.button`
+  padding: 4px 8px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1b98e0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.2s;
+  &:hover {
+    color: black;
+  }
+`;
+
 export const BtnMyMovies = styled.button`
   padding: 4px 8px;
   border-radius: 10px;
@@ -69,7 +88,7 @@ export const BtnMyMovies = styled.button`
   font-size: 14px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-left: 10px;
+  margin: 5px;
   &:hover {
     transform: scale(1.02);
     border: 1px solid black;
