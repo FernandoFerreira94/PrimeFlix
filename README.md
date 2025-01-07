@@ -11,6 +11,8 @@ Este projeto é um site de filmes desenvolvido com React.js, Styled Components, 
 - Sistema de redirecionamento para trailers no YouTube a partir dos títulos acessados
 - Página de erro 404 para páginas não encontradas
 - Mensagem de carregamento (loading) enquanto os dados são buscados
+- Salvar e excluir filmes favoritos com notificações estilizadas pelo React Toastify
+- Exibição de trailers dos filmes 
 
 ## Tecnologias Utilizadas
 
