@@ -17,9 +17,7 @@ a{
 color: #fff;
 text-decoration:none;
 transition: all 0.2s;
-&:hover {
-  color: rgba(0,0,0);
-}
+
 
 .link{
   color: black;
@@ -34,7 +32,7 @@ img {
 
 export const Container = styled.section`
   background-color: #f5f5f5;
-  max-width: 40%;
+  max-width: 30%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;

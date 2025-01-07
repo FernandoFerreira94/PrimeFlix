@@ -1,3 +1,4 @@
+import React from "react";
 import { getMovies } from "../../service/api";
 import { BtnMovie, Container, TitleMovie } from "../../styles/GlobalStyles";
 import { useEffect, useState } from "react";

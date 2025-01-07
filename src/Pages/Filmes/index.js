@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getMovieById } from "../../service/api";
@@ -45,11 +46,11 @@ export default function Filme() {
     );
 
   // Função para salvar o filme nos favoritos/local storage
-  function salvarFilme() {
-    const minhaLista = localStorage.getItem("@filmes");
+  function handleSalvarFilme(title) {
+    const listaFilmes = localStorage.getItem("@primeFlix");
 
     // Recupera a lista de filmes salvos ou inicializa um array vazio
-    let filmesSalvos = JSON.parse(minhaLista) || [];
+    let filmesSalvos = JSON.parse(listaFilmes) || [];
 
     // Verifica se o filme já está salvo
     const hasFilme = filmesSalvos.some(
@@ -57,14 +58,14 @@ export default function Filme() {
     );
 
     if (hasFilme) {
-      toast.warning("Já possui esse filme"); // Exibe toast de aviso se o filme já estiver salvo
+      toast.warning("Voçê já possui esse filme"); // Exibe toast de aviso se o filme já estiver salvo
       return;
     }
     filmesSalvos.push(filmes); // Adiciona o filme à lista de salvos
 
     // Atualiza o local storage com a nova lista de filmes
-    localStorage.setItem("@filmes", JSON.stringify(filmesSalvos));
-    toast.success("Filme salvo com sucesso"); // Exibe toast de sucesso
+    localStorage.setItem("@primeFlix", JSON.stringify(filmesSalvos));
+    toast.success(`${title} salvo com sucesso`); // Exibe toast de sucesso
   }
 
   // Exibe mensagem de carregamento enquanto os dados estão sendo obtidos
@@ -85,11 +86,13 @@ export default function Filme() {
           <strong>Avaliação: {filmes.vote_average} /10</strong>
         </Avaliacao>
         <div>
-          <BtnTrailer onClick={salvarFilme}>Salvar</BtnTrailer>
+          <BtnTrailer onClick={() => handleSalvarFilme(filmes.title)}>
+            Salvar
+          </BtnTrailer>
           <BtnTrailer>
             <Link
               to={`https://youtube.com/results?search_query=${filmes.title} trailer`}
-              target="_blank"
+              target="blank"
               rel="external"
             >
               Trailer

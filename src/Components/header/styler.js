@@ -30,3 +30,10 @@ export const LinkLogo = styled.a`
     color: #fff;
   }
 `;
+
+export const LinkFav = styled.a`
+  color: black;
+  &:hover {
+    color: #fff;
+  }
+`;

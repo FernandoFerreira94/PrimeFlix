@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BtnMyMovies } from "../../styles/GlobalStyles";
-import { LinkLogo, LogoText, Nav, XRed } from "./styler";
+import { LinkFav, LinkLogo, LogoText, Nav, XRed } from "./styler";
 
 export default function Header() {
   return (
@@ -12,7 +12,9 @@ export default function Header() {
           </LogoText>
         </LinkLogo>
 
-        <BtnMyMovies>Meus Filmes</BtnMyMovies>
+        <BtnMyMovies>
+          <LinkFav href="/favoritos">Meus Filmes</LinkFav>
+        </BtnMyMovies>
       </Nav>
     </header>
   );
