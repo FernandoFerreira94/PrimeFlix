@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../DataBase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-export default function Home() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  async function handlelogin(e) {
+  async function handleCadastrar(e) {
     e.preventDefault();
 
-    if (email !== "" && isValidEmail && password !== "") {
-      await signInWithEmailAndPassword(auth, email, password)
+    if (email !== "" && isValidEmail(email) && password !== "") {
+      await createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-          toast.success("Login");
+          toast.success("Cadastro feito com sucesso");
           navigate("/admin", { replace: true });
         })
         .catch((e) => {
@@ -33,8 +33,9 @@ export default function Home() {
 
   return (
     <section className="container">
-      <h1>Acessar Conta</h1>
-      <form onSubmit={handlelogin}>
+      <h1>Cadastrar</h1>
+      <p>Insira seus dados para realizar o cadastro!</p>
+      <form onSubmit={handleCadastrar}>
         <input
           type="email"
           placeholder="Digite seu email"
@@ -49,10 +50,10 @@ export default function Home() {
             setPassword(e.target.value);
           }}
         />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Cadastrar" />
       </form>
-      <a className="link" href="/register">
-        Não possue uma conta? Register-se
+      <a className="link" href="/login">
+        Já possui uma conta? Login.
       </a>
     </section>
   );

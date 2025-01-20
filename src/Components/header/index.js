@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import { BtnMyMovies } from "../../styles/GlobalStyles";
 import { LinkFav, LinkLogo, LogoText, Nav, XRed } from "./styler";
 
