@@ -32,7 +32,7 @@ img {
 
 export const Container = styled.section`
   background-color: #f5f5f5;
-  max-width: 600px;
+  max-width: 601px;
   width: 80%;
   margin: 20px auto;
   display: flex;
