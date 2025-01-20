@@ -32,7 +32,8 @@ img {
 
 export const Container = styled.section`
   background-color: #f5f5f5;
-  max-width: 30%;
+  max-width: 600px;
+  width: 80%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
